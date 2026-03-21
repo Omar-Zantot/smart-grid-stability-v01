@@ -1,8 +1,30 @@
 # Smart Grid Stability — ML Classification Study
 
+
 ## Overview
 
-This project applies supervised machine learning to predict the **stability of a smart electrical grid**. The study covers the full pipeline — from exploratory data analysis and feature engineering through baseline evaluation, hyperparameter optimisation with two meta-heuristic methods, statistical significance testing, model diagnosis, and explainability (XAI).
+This project applies supervised machine learning to predict the **stability of a smart electrical grid**. The study follows a structured six-phase methodology covering data analysis, feature engineering, baseline benchmarking, hyperparameter optimisation, statistical validation, model diagnosis, and explainability (XAI).
+
+### Research Framework
+
+![Smart Grid Framework](smart_grid_framework.png)
+
+### Methodology Flowchart
+
+The full step-by-step methodology is documented in [`methodology_flowchart.pdf`](methodology_flowchart.pdf), covering all phases from raw data ingestion through XAI interpretation.
+
+---
+
+## Methodology Phases
+
+| Phase                                                  | Notebooks    | Description                                                                               |
+| ------------------------------------------------------ | ------------ | ----------------------------------------------------------------------------------------- |
+| **Phase 1 — Data Understanding**                | 01           | EDA, class balance, correlation analysis, train/test split                                |
+| **Phase 2 — Feature Engineering**               | 02, 02a, 02b | Feature construction, cross-validated selection, separability analysis, imbalance study   |
+| **Phase 3 — Baseline Evaluation**               | 03           | 14-model untuned baseline, scaler sensitivity analysis, optimal scaler per model          |
+| **Phase 4 — Hyperparameter Optimisation**       | 04a, 05b     | TPE (Bayesian/Optuna) and Grey Wolf Optimiser (GWO), 50 trials/iterations per model       |
+| **Phase 5 — Comparative Analysis & Validation** | 06, 07, 08   | Cross-method comparison, Wilcoxon/Friedman statistical tests, error analysis, calibration |
+| **Phase 6 — Explainability (XAI)**              | 09           | SHAP-based global and local explanations for the best model (LightGBM)                    |
 
 ---
 
@@ -22,31 +44,33 @@ This project applies supervised machine learning to predict the **stability of a
 
 ## Notebooks
 
-| #   | Notebook                                       | Description                                                    |
-| --- | ---------------------------------------------- | -------------------------------------------------------------- |
-| 01  | `01_data_loading_and_eda.ipynb`              | Data loading, quality checks, EDA, class balance               |
-| 02  | `02_feature_engineering_and_selection.ipynb` | Feature construction & cross-validated selection               |
-| 02a | `02a_feature_separability_analysis.ipynb`    | Linear separability analysis (LDA, Fisher's criterion)         |
-| 02b | `02b_Imbalance_Handling_Study.ipynb`         | SMOTE vs. class-weight comparison                              |
-| 03  | `03_baseline_evaluation.ipynb`               | 14-model baseline with scaler sensitivity analysis             |
-| 04a | `04a_Bayesian_Optimization_TPE.ipynb`        | TPE (Optuna) hyperparameter optimisation                       |
-| 05b | `05b_Grey_Wolf_Optimization.ipynb`           | Grey Wolf Optimiser (GWO) hyperparameter search                |
-| 06  | `06_comprehensive_comparison.ipynb`          | Baseline vs. TPE vs. GWO cross-method comparison               |
-| 07  | `07_statistical_testing.ipynb`               | Wilcoxon signed-rank & Friedman statistical tests              |
-| 08  | `08_model_diagnosis.ipynb`                   | Error analysis, calibration, generalisation gap                |
-| 09  | `09_XAI_for_LightGBM.ipynb`                  | SHAP explainability — summary, dependence, waterfall, ICE/PDP |
+| #   | Notebook                                       | Phase   | Description                                                                             |
+| --- | ---------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
+| 01  | `01_data_loading_and_eda.ipynb`              | Phase 1 | Data loading, quality checks, EDA, correlation analysis, train/test split               |
+| 02  | `02_feature_engineering_and_selection.ipynb` | Phase 2 | Feature construction (ratio/product features) & 5-fold cross-validated selection        |
+| 02a | `02a_feature_separability_analysis.ipynb`    | Phase 2 | Linear separability analysis — LDA projections, Fisher's criterion, t-SNE              |
+| 02b | `02b_Imbalance_Handling_Study.ipynb`         | Phase 2 | SMOTE variants vs. class-weight: impact on classification performance                   |
+| 03  | `03_baseline_evaluation.ipynb`               | Phase 3 | 14-model untuned baseline, per-model optimal scaler selection, test evaluation          |
+| 04a | `04a_Bayesian_Optimization_TPE.ipynb`        | Phase 4 | Tree-structured Parzen Estimator (TPE) via Optuna — 50 trials per model                |
+| 05b | `05b_Grey_Wolf_Optimization.ipynb`           | Phase 4 | Grey Wolf Optimiser (GWO) — nature-inspired population search, 50 iterations per model |
+| 06  | `06_comprehensive_comparison.ipynb`          | Phase 5 | Baseline vs. TPE vs. GWO: accuracy, convergence, runtime comparison                     |
+| 07  | `07_statistical_testing.ipynb`               | Phase 5 | Wilcoxon signed-rank & Friedman tests for statistical significance of improvements      |
+| 08  | `08_model_diagnosis.ipynb`                   | Phase 5 | Error analysis, probability calibration, generalisation gap assessment                  |
+| 09  | `09_XAI_for_LightGBM.ipynb`                  | Phase 6 | SHAP explainability — global summary, dependence plots, waterfall bridge, ICE/PDP      |
 
 ---
 
 ## Models Evaluated
 
-14 classifiers spanning linear, kernel, ensemble, and boosting families:
+14 classifiers across linear, kernel, ensemble, and gradient boosting families:
 
 `LR` · `LDA` · `QDA` · `NB` · `KNN` · `LinearSVC` · `SVM` · `AdaBoost` · `RF` · `GB` · `XGBoost` · `LightGBM` · `CatBoost` · `SGD`
 
 ---
 
-## Key Results (Baseline — Test Set)
+## Key Results
+
+### Phase 3 — Baseline (Default Hyperparameters, Test Set)
 
 | Model         | Accuracy | F1     | AUC    |
 | ------------- | -------- | ------ | ------ |
@@ -56,27 +80,53 @@ This project applies supervised machine learning to predict the **stability of a
 | LightGBM      | 0.9711   | 0.9775 | 0.9969 |
 | Random Forest | 0.9690   | 0.9759 | 0.9962 |
 
-The best model after Grey Wolf Optimisation is **LightGBM** (Raw scaler), which serves as the target of the XAI analysis.
+### Phase 4 — After Hyperparameter Optimisation (Test Set, Top-5)
+
+**TPE (Optuna):**
+
+| Model              | Accuracy         | F1               | AUC              |
+| ------------------ | ---------------- | ---------------- | ---------------- |
+| **LightGBM** | **0.9991** | **0.9993** | **1.0000** |
+| GB                 | 0.9986           | 0.9989           | 1.0000           |
+| CatBoost           | 0.9970           | 0.9977           | 1.0000           |
+| SVM                | 0.9966           | 0.9973           | 0.9999           |
+| XGBoost            | 0.9939           | 0.9953           | 0.9998           |
+
+**GWO (Grey Wolf Optimiser):**
+
+| Model              | Accuracy         | F1               | AUC              |
+| ------------------ | ---------------- | ---------------- | ---------------- |
+| **LightGBM** | **0.9991** | **0.9993** | **1.0000** |
+| CatBoost           | 0.9978           | 0.9983           | 1.0000           |
+| GB                 | 0.9972           | 0.9978           | 1.0000           |
+| SVM                | 0.9971           | 0.9977           | 0.9998           |
+| XGBoost            | 0.9940           | 0.9953           | 0.9998           |
+
+> **LightGBM** (Raw scaler) achieves the highest accuracy under both optimisers and is selected as the target model for XAI analysis.
 
 ---
 
 ## Optimisation Methods
 
-| Method          | Trials / Iterations   | Framework |
-| --------------- | --------------------- | --------- |
-| TPE (Bayesian)  | 50 per model          | Optuna    |
-| GWO (Grey Wolf) | Custom implementation | NumPy     |
+| Method          | Trials / Iterations | Framework      | Search strategy                         |
+| --------------- | ------------------- | -------------- | --------------------------------------- |
+| TPE (Bayesian)  | 50 per model        | Optuna         | Probabilistic model-guided search       |
+| GWO (Grey Wolf) | 50 per model        | NumPy (custom) | Population-based nature-inspired search |
+
+Both methods use **5-fold stratified cross-validation** on training data as the fitness objective. The optimal scaler determined in Phase 3 is fixed for each model.
 
 ---
 
-## Explainability (XAI — Notebook 09)
+## Explainability (XAI — Phase 6, Notebook 09)
 
-Four publication-ready figures generated for LightGBM:
+SHAP TreeExplainer applied to the best model (LightGBM, GWO-optimised, Raw scaler). Four publication-ready IEEE-format figures:
 
-1. **SHAP Summary Plot** — global feature importance ranked by mean |SHAP|
-2. **SHAP Dependence Plots** — individual feature effects for the top-6 features with coolwarm coloring
-3. **SHAP Waterfall Bridge** — cumulative contribution chart for a representative stable and unstable case
-4. **ICE / PDP Plots** — partial dependence curves with individual conditional expectation profiles
+| Figure                          | Description                                                                      |
+| ------------------------------- | -------------------------------------------------------------------------------- |
+| **SHAP Summary Plot**     | Global feature importance ranked by mean\|SHAP\|; beeswarm distribution          |
+| **SHAP Dependence Plots** | Feature-value vs. SHAP effect for top-6 features; coolwarm coloring by SHAP sign |
+| **SHAP Waterfall Bridge** | Cumulative contribution chart for a representative stable and unstable case      |
+| **ICE / PDP Plots**       | Partial dependence + individual conditional expectation for top-6 features       |
 
 ---
 
@@ -85,15 +135,17 @@ Four publication-ready figures generated for LightGBM:
 ```
 smart-grid-stability-v01/
 ├── data/
-│   └── smart_grid_stability_augmented.csv   # Raw dataset
-├── notebooks/                               # Jupyter notebooks (01–09)
+│   └── smart_grid_stability_augmented.csv   # Raw dataset (60,000 samples)
+├── notebooks/                               # Jupyter notebooks (01–09, phases 1–6)
 ├── utils/
 │   ├── plot_config.py                       # IEEE-style figure configuration
 │   └── __init__.py
 ├── results/
 │   ├── figures/                             # Saved PNG/PDF figures (git-ignored)
-│   ├── tables/                              # CSV/JSON result artefacts (git-ignored)
-│   └── smart_grid_framework.png            # Project framework diagram
+│   └── tables/                             # CSV/JSON/NPY result artefacts (git-ignored)
+├── smart_grid_framework.png                 # Research framework diagram
+├── methodology_flowchart.pdf               # Full methodology flowchart
+├── .gitignore
 └── README.md
 ```
 
@@ -117,14 +169,12 @@ smart-grid-stability-v01/
 
 ## Reproducibility
 
-1. Clone the repository.
-2. Install dependencies (see environment table above).
-3. Run notebooks **in order** (01 → 09). Each notebook saves its outputs to `results/tables/`, which downstream notebooks load.
+Run notebooks **in order** (01 → 09). Each notebook saves its outputs to `results/tables/`, which downstream notebooks load as frozen inputs — ensuring full reproducibility with no re-training required in later phases.
 
 ```bash
 git clone https://github.com/Omar-Zantot/smart-grid-stability-v01.git
 cd smart-grid-stability-v01
-pip install numpy pandas scikit-learn xgboost lightgbm catboost shap optuna matplotlib
+pip install numpy pandas scikit-learn xgboost lightgbm catboost shap optuna matplotlib seaborn
 jupyter notebook
 ```
 
