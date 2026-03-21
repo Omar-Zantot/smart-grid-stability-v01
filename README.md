@@ -1,5 +1,10 @@
 # Smart Grid Stability — ML Classification Study
 
+**Author:** Omar Khaled  
+**Repository:** [Omar-Zantot/smart-grid-stability-v01](https://github.com/Omar-Zantot/smart-grid-stability-v01)  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19151106.svg)](https://doi.org/10.5281/zenodo.19151106)
+
+---
 
 ## Overview
 
