@@ -1,0 +1,4 @@
+Comparison,N_Models,N_Significant_Holm,Pct_Significant_Holm,N_CI_Excludes_Zero,Pct_CI_Excludes_Zero,Mean_Effect_Size,Median_Effect_Size,Mean_Difference_Avg,Min_Corrected_p
+Baseline vs TPE,14,0,0.0,10,71.4,0.7,1.0,0.015731,0.875
+Baseline vs GWO,14,0,0.0,11,78.6,0.6476,1.0,0.015824,0.875
+TPE vs GWO,14,0,0.0,4,28.6,0.1571,0.0667,9.4e-05,0.875

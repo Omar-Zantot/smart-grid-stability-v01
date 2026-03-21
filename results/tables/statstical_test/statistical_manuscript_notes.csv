@@ -1,0 +1,7 @@
+Key,Note
+power_limitation,"With n=5 folds, the Wilcoxon signed-rank test has a minimum two-sided p-value of 0.0625 (Conover, 1971); no test can reach alpha=0.05. CIs are the primary uncertainty evidence."
+strongest_improvement_by_CI,'Baseline vs GWO' shows the most consistent improvement: 11/14 models have CIs excluding zero.
+baseline_vs_tpe_ci_models,"Models where Baseline vs TPE CI excludes zero (10/14): AdaBoost, CB, GB, KNN, LGBM, LR, QDA, SGD, SVM, XGB"
+baseline_vs_gwo_ci_models,"Models where Baseline vs GWO CI excludes zero (11/14): AdaBoost, CB, GB, KNN, LGBM, LR, QDA, RF, SGD, SVM, XGB"
+tpe_vs_gwo_differences,"Models where TPE vs GWO CI excludes zero (4/14): AdaBoost, GB, SGD, SVM. Differences between optimizers are largely marginal."
+effect_size_context,Mean rank-biserial effect sizes — Baseline vs TPE: 0.700 (1.000 median); Baseline vs GWO: 0.648 (1.000 median); TPE vs GWO: 0.157 (0.067 median)

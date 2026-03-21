@@ -1,0 +1,11 @@
+{
+  "train_samples": 48000,
+  "test_samples": 12000,
+  "train_class_0_stable": 17376,
+  "train_class_1_unstable": 30624,
+  "test_class_0_stable": 4344,
+  "test_class_1_unstable": 7656,
+  "test_size_fraction": 0.2,
+  "random_state": 42,
+  "stratified": true
+}

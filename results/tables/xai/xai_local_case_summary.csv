@@ -1,0 +1,3 @@
+Case_ID,True_Label,Predicted_Label,Probability,Top_Positive_Features,Top_Negative_Features
+8467,Stable,Stable,0.9999999995236726,tau2_g2 (+11.876); g_sum (+5.911); tau3 (+4.941),tau1 (-8.543); tau1_g1 (-5.618); g1 (-2.538)
+5256,Unstable,Unstable,0.9971646541477419,tau4_g4 (+10.885); tau2 (+5.283); tau4 (+4.912),g_sum (-10.563); tau3_g3 (-8.835); tau1_g1 (-6.377)
