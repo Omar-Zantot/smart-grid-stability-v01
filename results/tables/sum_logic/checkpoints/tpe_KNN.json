@@ -1,0 +1,29 @@
+{
+  "best": {
+    "Model": "KNN",
+    "Optimal_Scaler": "Raw",
+    "Best_CV_Mean": 0.9487916666666665,
+    "Best_Trial": 15,
+    "n_neighbors": 14,
+    "weights": "distance",
+    "metric": "manhattan",
+    "p": 2
+  },
+  "timing": {
+    "Model": "KNN",
+    "TPE_Search_Sec": 1417.1168191999996,
+    "TPE_Evaluation_Sec": 302.9021236999997,
+    "TPE_Total_Sec": 1720.238872500001,
+    "Best_CV_Mean": 0.9487916666666665
+  },
+  "memory_before": {
+    "available_gb": 2.7162551879882812,
+    "used_percent": 82.7,
+    "process_mb": 242.2734375
+  },
+  "memory_after": {
+    "available_gb": 2.180461883544922,
+    "used_percent": 86.1,
+    "process_mb": 241.9375
+  }
+}

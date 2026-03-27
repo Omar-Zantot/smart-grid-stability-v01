@@ -1,0 +1,30 @@
+{
+  "best": {
+    "Model": "LR",
+    "Optimal_Scaler": "Power",
+    "Best_CV_Mean": 0.8973125,
+    "Best_Iteration": 44,
+    "C": 3.3395113518992785,
+    "penalty": "l1",
+    "solver": "saga",
+    "max_iter": 2000,
+    "random_state": 42
+  },
+  "timing": {
+    "Model": "LR",
+    "GWO_Search_Sec": 378.41369600000326,
+    "GWO_Evaluation_Sec": 132.91408430000592,
+    "GWO_Total_Sec": 511.64614599999913,
+    "Best_CV_Mean": 0.8973125
+  },
+  "memory_before": {
+    "available_gb": 4.452518463134766,
+    "used_percent": 71.7,
+    "process_mb": 219.13671875
+  },
+  "memory_after": {
+    "available_gb": 5.425834655761719,
+    "used_percent": 65.5,
+    "process_mb": 173.16015625
+  }
+}

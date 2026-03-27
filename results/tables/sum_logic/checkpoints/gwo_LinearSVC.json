@@ -1,0 +1,30 @@
+{
+  "best": {
+    "Model": "LinearSVC",
+    "Optimal_Scaler": "Power",
+    "Best_CV_Mean": 0.8971250000000002,
+    "Best_Iteration": 50,
+    "C": 5.723708857010383,
+    "loss": "hinge",
+    "dual": "auto",
+    "max_iter": 5000,
+    "random_state": 42
+  },
+  "timing": {
+    "Model": "LinearSVC",
+    "GWO_Search_Sec": 255.20424609999463,
+    "GWO_Evaluation_Sec": 105.37664519999817,
+    "GWO_Total_Sec": 360.8625305000023,
+    "Best_CV_Mean": 0.8971250000000002
+  },
+  "memory_before": {
+    "available_gb": 6.5301666259765625,
+    "used_percent": 58.5,
+    "process_mb": 209.39453125
+  },
+  "memory_after": {
+    "available_gb": 6.484840393066406,
+    "used_percent": 58.8,
+    "process_mb": 205.421875
+  }
+}

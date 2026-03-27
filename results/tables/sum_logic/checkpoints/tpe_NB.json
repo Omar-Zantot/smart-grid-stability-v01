@@ -1,0 +1,26 @@
+{
+  "best": {
+    "Model": "NB",
+    "Optimal_Scaler": "Power",
+    "Best_CV_Mean": 0.8430416666666666,
+    "Best_Trial": 0,
+    "var_smoothing": 1.7670169402947963e-10
+  },
+  "timing": {
+    "Model": "NB",
+    "TPE_Search_Sec": 93.15169770002831,
+    "TPE_Evaluation_Sec": 90.94659249996766,
+    "TPE_Total_Sec": 184.28686120000202,
+    "Best_CV_Mean": 0.8430416666666666
+  },
+  "memory_before": {
+    "available_gb": 3.6272315979003906,
+    "used_percent": 76.9,
+    "process_mb": 222.2421875
+  },
+  "memory_after": {
+    "available_gb": 3.48406982421875,
+    "used_percent": 77.9,
+    "process_mb": 222.31640625
+  }
+}

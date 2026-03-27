@@ -1,0 +1,30 @@
+{
+  "best": {
+    "Model": "SVM",
+    "Optimal_Scaler": "Standard",
+    "Best_CV_Mean": 0.9943541666666667,
+    "Best_Trial": 5,
+    "kernel": "poly",
+    "C": 285.7080075040722,
+    "gamma": "auto",
+    "degree": 3,
+    "coef0": 0.5200680211778108
+  },
+  "timing": {
+    "Model": "SVM",
+    "TPE_Search_Sec": 27093.003589199994,
+    "TPE_Evaluation_Sec": 1322.2921790999972,
+    "TPE_Total_Sec": 28416.02478,
+    "Best_CV_Mean": 0.9943541666666667
+  },
+  "memory_before": {
+    "available_gb": 6.028636932373047,
+    "used_percent": 61.7,
+    "process_mb": 217.7109375
+  },
+  "memory_after": {
+    "available_gb": 4.8676605224609375,
+    "used_percent": 69.1,
+    "process_mb": 191.43359375
+  }
+}

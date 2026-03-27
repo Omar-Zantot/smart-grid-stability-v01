@@ -1,0 +1,29 @@
+{
+  "best": {
+    "Model": "SGD",
+    "Optimal_Scaler": "Power",
+    "Best_CV_Mean": 0.8961041666666667,
+    "Best_Trial": 47,
+    "loss": "log_loss",
+    "penalty": "l1",
+    "alpha": 0.0002076714555141711,
+    "l1_ratio": 0.3357453779656655
+  },
+  "timing": {
+    "Model": "SGD",
+    "TPE_Search_Sec": 161.93693229999917,
+    "TPE_Evaluation_Sec": 103.45260859999689,
+    "TPE_Total_Sec": 265.61526479999884,
+    "Best_CV_Mean": 0.8961041666666667
+  },
+  "memory_before": {
+    "available_gb": 6.169681549072266,
+    "used_percent": 60.8,
+    "process_mb": 219.79296875
+  },
+  "memory_after": {
+    "available_gb": 6.094230651855469,
+    "used_percent": 61.3,
+    "process_mb": 215.1328125
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "best": {
+    "Model": "LDA",
+    "Optimal_Scaler": "Power",
+    "Best_CV_Mean": 0.8953125,
+    "Best_Iteration": 1,
+    "solver": "eigen"
+  },
+  "timing": {
+    "Model": "LDA",
+    "GWO_Search_Sec": 176.47128599999996,
+    "GWO_Evaluation_Sec": 152.6768316999951,
+    "GWO_Total_Sec": 329.57622050000646,
+    "Best_CV_Mean": 0.8953125
+  },
+  "memory_before": {
+    "available_gb": 5.21099853515625,
+    "used_percent": 66.9,
+    "process_mb": 204.47265625
+  },
+  "memory_after": {
+    "available_gb": 7.434627532958984,
+    "used_percent": 52.7,
+    "process_mb": 185.8515625
+  }
+}

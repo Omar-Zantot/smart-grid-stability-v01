@@ -1,0 +1,35 @@
+{
+  "best": {
+    "Model": "XGB",
+    "Optimal_Scaler": "MinMax",
+    "Best_CV_Mean": 0.9936458333333335,
+    "Best_Iteration": 34,
+    "n_estimators": 427,
+    "learning_rate": 0.49999999999999994,
+    "max_depth": 4,
+    "min_child_weight": 1,
+    "subsample": 0.7562433198416751,
+    "colsample_bytree": 0.9205406478413578,
+    "gamma": 0.33194677292650804,
+    "reg_alpha": 1.3748101450838413e-07,
+    "reg_lambda": 6.711895421073184e-07,
+    "random_state": 42
+  },
+  "timing": {
+    "Model": "XGB",
+    "GWO_Search_Sec": 342.0923574999906,
+    "GWO_Evaluation_Sec": 92.11486299999524,
+    "GWO_Total_Sec": 434.4912329999934,
+    "Best_CV_Mean": 0.9936458333333335
+  },
+  "memory_before": {
+    "available_gb": 5.2228546142578125,
+    "used_percent": 66.8,
+    "process_mb": 248.60546875
+  },
+  "memory_after": {
+    "available_gb": 6.094264984130859,
+    "used_percent": 61.3,
+    "process_mb": 205.390625
+  }
+}

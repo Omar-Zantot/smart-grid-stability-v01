@@ -1,0 +1,30 @@
+{
+  "best": {
+    "Model": "RF",
+    "Optimal_Scaler": "MinMax",
+    "Best_CV_Mean": 0.9706041666666667,
+    "Best_Trial": 46,
+    "n_estimators": 233,
+    "max_depth": 18,
+    "min_samples_split": 2,
+    "min_samples_leaf": 2,
+    "max_features": null
+  },
+  "timing": {
+    "Model": "RF",
+    "TPE_Search_Sec": 5297.9615115,
+    "TPE_Evaluation_Sec": 394.21743550000065,
+    "TPE_Total_Sec": 5693.3331361,
+    "Best_CV_Mean": 0.9706041666666667
+  },
+  "memory_before": {
+    "available_gb": 2.114025115966797,
+    "used_percent": 86.6,
+    "process_mb": 203.890625
+  },
+  "memory_after": {
+    "available_gb": 4.705455780029297,
+    "used_percent": 70.1,
+    "process_mb": 242.68359375
+  }
+}

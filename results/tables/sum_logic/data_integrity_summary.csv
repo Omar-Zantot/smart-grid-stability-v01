@@ -1,0 +1,12 @@
+Check,Value
+Raw rows,60000
+Raw columns,14
+Raw duplicate rows,0
+Raw missing values,0
+Engineered feature count,19
+Selected feature count,13
+Train rows,48000
+Test rows,12000
+Train positive rate,0.638
+Test positive rate,0.638
+Split reproducible,True

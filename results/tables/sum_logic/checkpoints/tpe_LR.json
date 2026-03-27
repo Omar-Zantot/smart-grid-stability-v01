@@ -1,0 +1,27 @@
+{
+  "best": {
+    "Model": "LR",
+    "Optimal_Scaler": "Power",
+    "Best_CV_Mean": 0.8973125,
+    "Best_Trial": 20,
+    "C": 3.70332558170265,
+    "penalty": "l1"
+  },
+  "timing": {
+    "Model": "LR",
+    "TPE_Search_Sec": 359.33046500000637,
+    "TPE_Evaluation_Sec": 136.33559610001976,
+    "TPE_Total_Sec": 495.85704240005,
+    "Best_CV_Mean": 0.8973125
+  },
+  "memory_before": {
+    "available_gb": 2.1835365295410156,
+    "used_percent": 86.1,
+    "process_mb": 23.03125
+  },
+  "memory_after": {
+    "available_gb": 2.312541961669922,
+    "used_percent": 85.3,
+    "process_mb": 162.96484375
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "LGBM": {
+    "tpe": "completed",
+    "gwo": "completed"
+  },
+  "CB": {
+    "gwo": "completed",
+    "tpe": "completed"
+  },
+  "LDA": {
+    "tpe": "completed",
+    "gwo": "completed"
+  },
+  "QDA": {
+    "tpe": "completed",
+    "gwo": "completed"
+  },
+  "NB": {
+    "tpe": "completed",
+    "gwo": "completed"
+  },
+  "AdaBoost": {
+    "tpe": "completed",
+    "gwo": "completed"
+  },
+  "LR": {
+    "tpe": "completed",
+    "gwo": "completed"
+  },
+  "KNN": {
+    "tpe": "completed",
+    "gwo": "completed"
+  },
+  "LinearSVC": {
+    "tpe": "completed",
+    "gwo": "completed"
+  },
+  "RF": {
+    "tpe": "completed"
+  },
+  "GB": {
+    "tpe": "completed"
+  },
+  "XGB": {
+    "tpe": "completed",
+    "gwo": "completed"
+  },
+  "SGD": {
+    "tpe": "completed",
+    "gwo": "completed"
+  },
+  "SVM": {
+    "tpe": "completed"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "best": {
+    "Model": "QDA",
+    "Optimal_Scaler": "Power",
+    "Best_CV_Mean": 0.8986458333333334,
+    "Best_Iteration": 50,
+    "reg_param": 0.0371838722405428
+  },
+  "timing": {
+    "Model": "QDA",
+    "GWO_Search_Sec": 163.55956189999415,
+    "GWO_Evaluation_Sec": 122.48287459999847,
+    "GWO_Total_Sec": 286.2886448000063,
+    "Best_CV_Mean": 0.8986458333333334
+  },
+  "memory_before": {
+    "available_gb": 7.301673889160156,
+    "used_percent": 53.6,
+    "process_mb": 198.36328125
+  },
+  "memory_after": {
+    "available_gb": 6.109477996826172,
+    "used_percent": 61.2,
+    "process_mb": 198.37890625
+  }
+}

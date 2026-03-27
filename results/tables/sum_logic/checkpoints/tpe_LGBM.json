@@ -1,0 +1,34 @@
+{
+  "best": {
+    "Model": "LGBM",
+    "Optimal_Scaler": "Raw",
+    "Best_CV_Mean": 0.9976875,
+    "Best_Trial": 34,
+    "n_estimators": 361,
+    "learning_rate": 0.4265358283703735,
+    "max_depth": 15,
+    "num_leaves": 41,
+    "min_child_samples": 25,
+    "subsample": 0.8242075224618575,
+    "colsample_bytree": 0.912309316920778,
+    "reg_alpha": 1.3367801102293914e-07,
+    "reg_lambda": 0.0007077462867900337
+  },
+  "timing": {
+    "Model": "LGBM",
+    "TPE_Search_Sec": 2572.0219750000397,
+    "TPE_Evaluation_Sec": 212.04278459999477,
+    "TPE_Total_Sec": 2784.9033782999613,
+    "Best_CV_Mean": 0.9976875
+  },
+  "memory_before": {
+    "available_gb": 4.376396179199219,
+    "used_percent": 72.2,
+    "process_mb": 228.234375
+  },
+  "memory_after": {
+    "available_gb": 3.1296539306640625,
+    "used_percent": 80.1,
+    "process_mb": 218.91796875
+  }
+}

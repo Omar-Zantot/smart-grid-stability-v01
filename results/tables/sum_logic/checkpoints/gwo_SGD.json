@@ -1,0 +1,31 @@
+{
+  "best": {
+    "Model": "SGD",
+    "Optimal_Scaler": "Power",
+    "Best_CV_Mean": 0.8955416666666667,
+    "Best_Iteration": 28,
+    "loss": "modified_huber",
+    "penalty": "l1",
+    "alpha": 0.0009097185752192508,
+    "l1_ratio": 0.6302027952065101,
+    "max_iter": 2000,
+    "random_state": 42
+  },
+  "timing": {
+    "Model": "SGD",
+    "GWO_Search_Sec": 143.8542899000022,
+    "GWO_Evaluation_Sec": 97.61498839998967,
+    "GWO_Total_Sec": 241.7091589000047,
+    "Best_CV_Mean": 0.8955416666666667
+  },
+  "memory_before": {
+    "available_gb": 6.502922058105469,
+    "used_percent": 58.7,
+    "process_mb": 227.33203125
+  },
+  "memory_after": {
+    "available_gb": 6.4954376220703125,
+    "used_percent": 58.7,
+    "process_mb": 223.12890625
+  }
+}

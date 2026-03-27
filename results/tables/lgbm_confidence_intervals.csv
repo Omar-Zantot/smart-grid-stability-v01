@@ -1,0 +1,9 @@
+Metric,Baseline (95% CI),TPE (95% CI),GWO (95% CI)
+Accuracy,0.9677 [0.9661–0.9693],0.9979 [0.9976–0.9983],0.9975 [0.9970–0.9980]
+Precision,—,—,—
+Recall,—,—,—
+F1-Score,—,—,—
+MCC,—,—,—
+AUC,—,—,—
+LogLoss,—,—,—
+Kappa,—,—,—

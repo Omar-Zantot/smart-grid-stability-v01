@@ -1,0 +1,2 @@
+Model,TPE_Evaluations,GWO_Evaluations,TPE_Search_Sec,GWO_Search_Sec,TPE_Time_per_Eval_ms,GWO_Time_per_Eval_ms,GWO_over_TPE_Time_Ratio,Hyperparam_Dim_TPE,Hyperparam_Dim_GWO,Theoretical_TPE,Theoretical_GWO
+LGBM,50,50,2572.02197500004,1069.5944657000364,51440.4395000008,21391.889314000728,0.4158574367157262,9,10,O(T*C_eval + T log T),O(P*I*C_eval + P*I*d)

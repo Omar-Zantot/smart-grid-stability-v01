@@ -1,16 +1,14 @@
 {
-  "timestamp": "2026-03-16T22:41:21.050279",
-  "os": "Windows",
-  "os_version": "11",
-  "python_version": "3.13.2",
-  "cpu_count": 4,
-  "cpu_count_logical": 8,
-  "total_memory_gb": 15.73,
-  "available_memory_gb": 1.34,
+  "recorded_at": "2026-03-24T22:57:16.380977",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+  "python_version": "3.13.2 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 18:49:14) [MSC v.1929 64 bit (AMD64)]",
   "numpy_version": "2.2.5",
   "pandas_version": "2.2.3",
+  "matplotlib_version": "3.10.5",
+  "seaborn_version": "0.13.2",
   "sklearn_version": "1.7.1",
-  "xgboost_version": "3.0.1",
-  "lightgbm_version": "4.6.0",
-  "catboost_version": "1.2.8"
+  "total_ram_gb": 15.73,
+  "cpu_count_logical": 8,
+  "cpu_count_physical": 4
 }

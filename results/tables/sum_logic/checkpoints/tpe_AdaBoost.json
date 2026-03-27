@@ -1,0 +1,28 @@
+{
+  "best": {
+    "Model": "AdaBoost",
+    "Optimal_Scaler": "Raw",
+    "Best_CV_Mean": 0.9509791666666668,
+    "Best_Trial": 45,
+    "n_estimators": 401,
+    "learning_rate": 1.8093046024213546,
+    "algorithm": "SAMME.R"
+  },
+  "timing": {
+    "Model": "AdaBoost",
+    "TPE_Search_Sec": 7610.104851900018,
+    "TPE_Evaluation_Sec": 471.1819537000265,
+    "TPE_Total_Sec": 8083.071237700002,
+    "Best_CV_Mean": 0.9509791666666668
+  },
+  "memory_before": {
+    "available_gb": 3.5093650817871094,
+    "used_percent": 77.7,
+    "process_mb": 222.45703125
+  },
+  "memory_after": {
+    "available_gb": 1.9011421203613281,
+    "used_percent": 87.9,
+    "process_mb": 190.37109375
+  }
+}
